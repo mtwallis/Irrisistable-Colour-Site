@@ -1,0 +1,1406 @@
+/*!
+ * Project Name: Irresistible Colour
+ * Client: Irresistible Colour
+ * Author: Matthew Wallis
+ */
+
+
+/*******************************************
+ * SETUP
+ *******************************************/
+
+/* Box Model Hack */
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+       -moz-box-sizing: border-box; /* Firexfox */
+            box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+/*******************************************
+ * BASE STYLES
+ *******************************************/
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+/*******************************************
+ * LAYOUT
+ *******************************************/
+
+/* Center the container */
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+header {
+    margin-top: 5px;
+}
+
+footer {
+
+}
+
+/*******************************************
+ * ADDITIONAL STYLES
+ *******************************************/
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.6em;
+    text-align: right;
+    color: #fff;
+    padding: 0.4em 0.15em 0.15em 0;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+	margin-bottom: 0;
+}
+h2{
+    text-align: right;
+    padding: 0 0.5em 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 2em;
+    letter-spacing: 0.17em;
+	margin: 0.008235em 0 0.01411764em 0;
+}
+h3 {
+	font-family: 'Dosis', sans-serif;
+	margin: 1.1694915% 0;
+}
+p {
+	font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;
+	margin-bottom: 5.9322%;
+}
+h3 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.4em;
+	font-weight: lighter;
+}
+h3 a:hover {
+	color: #d4d4d4;
+}
+h4 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+nav {
+	float: left;
+	background: #000;
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+	text-align: center;
+	list-style: none;
+	padding: 0 0 0 2em;
+}
+nav ul li {
+	float: left;
+	display: inline;
+	padding: 0 5px 0 5px;
+}
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #d4d4d4;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+    padding: 0 0.7em;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+nav ul li a:hover {
+	border-right: 1px solid #d4d4d4;
+	border-left: 1px solid #d4d4d4;
+}
+nav ul li:nth-child(2) {
+	cursor: pointer;
+}
+nav ul li ul {
+	position: absolute;
+	margin-top: 10px;
+	padding-left: 0;
+	width: 175px;
+	z-index: 10;
+}
+nav ul li ul li {
+	display: block;
+/*	background-color: rgba(255, 255, 255, 0.5);*/
+/*	padding: 10px 30px;*/
+	font-size: 1em;
+	color: #000;
+	margin: 0;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-radius: 2px;
+}
+nav ul li ul li:last-child {
+	border-bottom: 1px solid #000;
+}
+nav ul li ul li a:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+nav ul li ul li a {
+  border: none;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em 2.5em;
+  font-size: 0.85em;
+  color: #000;
+  margin: .4706em 0;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 10em;
+}
+nav ul li ul li a:hover {
+	border: none;
+}
+input[type="text"] {
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 1px solid #d4d4d4;
+}
+textarea {
+  background: #f1f1f1;
+  border-radius: 3px;
+  border: 1px solid #d4d4d4;
+  height: 120px;
+  width: 345px;
+}
+input[type="text"]:focus {
+  background: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #000;
+  outline: none;
+}
+textarea:focus {
+  background: #fafafa;
+  border: 1px solid #000;
+  outline: none;
+}
+legend {
+  padding-top: 30px;
+}
+label {
+  display: inline-block;
+}
+.make-up-menu, .menu2 {
+    list-style: none;
+    margin: 0;
+}
+.trans-bar nav ul li ul {
+	
+}
+.right-menu {
+	margin-bottom: 20px;
+}
+.right-menu img {
+    width: 100%;
+    height: auto;
+    -moz-box-shadow:    inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow:         inset 0 0 3px #000000;
+}
+.right-menu2 {
+	margin-bottom: 20px;
+}
+.right-menu2 img {
+    width: 100%;
+    height: auto;
+    -moz-box-shadow:    inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow:         inset 0 0 3px #000000;
+}
+.page-backs {
+	background-color: #fff;
+}
+.top-function {
+    background-color: #000;
+	height: 7.8em;
+}
+.main-nav {
+    text-align: center;
+    margin: 0;
+    padding: 10px 10px 15px 10px;
+}
+.make-up-menu {
+    margin-right: 5px;
+    padding-top: 310px;
+}
+.main-nav li {
+    padding-bottom: 15px;
+}
+.foot {
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 25px;
+  float: left;
+  position: relative;
+}
+.foot p {
+    color: #000;
+    padding-left: 40px;
+    float: left;
+    margin: 0;
+}
+.product p {
+    width: 77%;
+    float: right;
+    font-family: arial, helvetica, sans-serif;
+    text-align: right;
+    font-size: .75em;
+    padding-right: 3em;
+    position: relative;
+}
+.fbtw {
+    position: absolute;
+    left: 90%;
+}
+.fbtw ul {
+    margin: 0;
+    padding: 0;
+}
+.fbtw li {
+    list-style-type: none;
+    display: inline-block;
+}
+.fbtw ul li {
+    height: 25px;
+    width: 25px;
+}
+.fbtw ul li a img {
+  height: 100%;
+  width: 100%;
+}
+.fbtw2 {
+    display: inline;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    padding-right: 20px;
+}
+.fbtw2 ul {
+    margin: 0;
+    padding: 0;
+}
+.fbtw2 li {
+    list-style-type: none;
+    display: inline-block;
+}
+.fbtw2 ul li {
+  width: 25px;
+  height: 25px;
+}
+.fbtw2 ul li a img {
+  height: 100%;
+  width: 100%;
+}
+.product h2 {
+    text-align: right;
+	margin-bottom: 0;
+	padding-top: 20px;
+}
+.shade01 {
+	width: 4.6875em;
+    height: 4.6875em;
+    background: lightgray url('../img/makeup-texture3.png') no-repeat 100%;
+    border-radius: 15px;
+    position: relative;
+    left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.light-neutral-cool {
+	width: 4.6875em;
+    height: 4.6875em;
+	background: #e8b892 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.light-neutral-warm {
+	width: 4.6875em;
+    height: 4.6875em;
+	background: #e5b285 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.meduim-neutral-cool {
+	width: 4.6875em;
+    height: 4.6875em;
+	background: #e19a6c url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+    left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.medium-neutral-warm {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #d2996c url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.tan-neutral-cool {
+	width: 4.6875em;
+    height: 4.6875em;
+	background: #c2815b url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.tan-neutral-warm {
+	width: 4.6875em;
+    height: 4.6875em;
+	background: #bb7a50 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.medium-warm {
+	width: 4.6875em;
+    height: 4.6875em;
+	background: #cd9a85 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.deep-warm {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #995435 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.golden-medium-golden-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #c28f5a url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.medium-tan-cool-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #ab7052 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.golden-tan-golden-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #b47a54 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.warm-tan-golden-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #ac7151 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.golden-deep-golden-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #895d42 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.warm-deep-golden-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #935a3f url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.medium-deep-cool-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #805c46 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.deepest-deep-neutral-tone {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #613c29 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.black-plum {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #6e4e63 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.warm-beige {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #e9c6b2 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.red-wine {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #865c5e url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.mastic {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #8a726e url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.pale-beige {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #f7dfd5 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.light-pink {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #ffd8e3 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.dark-grey {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #6e6462 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.dark-blue {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #383e54 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.naked-light {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #ffe2c6 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.naked-medium-light {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #f4d2b7 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.naked-medium {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #e1c3a7 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.naked-medium-dark {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #d4a881 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.naked-dark {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #ac7851 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.fair {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #f3c8a6 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.light {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #f1c8a8 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.light-medium {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #e5bc9c url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.medium {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #e1b391 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.beige {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #ddb38d url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.deep-beige {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #d8ab81 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.pink-honey {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #cb9066 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.neutral-saffron {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #bb7844 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.neutral-ebony {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #763d20 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.neutral-caramel {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #9f603d url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.neutral-brown {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #b16237 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.golden-caramel {
+    width: 4.6875em;
+    height: 4.6875em;
+	background: #c67548 url('../img/makeup-texture3.png') no-repeat;
+	border-radius: 15px;
+	position: relative;
+	left: 5.625em;
+    top: 5.625em;
+    float: left;
+}
+.shades {
+    position: relative;
+    float: left;
+    width: 22%;
+    top: 5.625em;
+    left: 5.625em;
+}     
+.shades li a {
+    font-size: .8em;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+	padding: 2px 0;
+	cursor: pointer;
+}
+.shades li {
+    list-style-type: none;  
+    line-height: 115%;
+}
+.top-image {
+	float: left;
+	clear: both;
+}
+.product {
+    position: relative;
+    margin-top: 1.68634%;
+    width: 40%;
+    float: right;
+}
+.bottom-menu {
+	float: right;
+	position: relative;
+	right: 3px;
+	bottom: 22px;
+}
+.BgI {
+	float: left;
+    width: 35%;
+    height: auto;
+}
+.BgI img {
+  width: 100%;
+  height: auto;
+}
+.shades ul {
+	padding: 0;
+}
+.gallery {
+	width: 90%;
+	position: relative;
+	top: 20px;
+	float: left;
+	clear: both;
+}
+.gallery ul li {
+	display: inline;
+	padding-top: 30px;
+	list-style-type: none;
+}
+.gallery ul li a img {
+	margin: 20px 60px 50px;
+	cursor: pointer;
+	border-radius: 3px;
+	box-shadow: 4px 4px 7px #A5A5A5;
+}
+.gallery ul li h4 {
+	text-align: center;
+	margin: 0;
+}
+.top-left-video {
+	float: left;
+	padding-left: 20px;
+    width: 50%;
+}
+.top-right-video {
+	float: right;
+	padding-right: 20px;
+    width: 50%;
+}
+.bottom-left-video {
+	float: left;
+	padding-left: 20px;
+    width: 50%;
+}
+.bottom-right-video {
+	float: right;
+	padding-right: 20px;
+    width: 50%;
+}
+.top-left-video li a img {
+    width: 70%;
+    height: auto;
+}
+.top-right-video li a img {
+    width: 70%;
+    height: auto;
+}
+.bottom-left-video li a img {
+    width: 70%;
+    height: auto;
+}
+.bottom-right-video li a img {
+    width: 70%;
+    height: auto;
+}
+.top-left-video li h4 {
+    display: flex;
+    justify-content: center;
+}
+#video {
+	padding: 0;
+}
+.about-field img {
+	float: left;
+	width: 14%;
+	box-shadow: 3px 3px 10px #d4d4d4;
+	margin: 20px;
+}
+.about-field {
+	margin: 100px 100px 10px 100px;
+}
+.trans-bar nav ul li ul li a {
+	border: none;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 10px 30px;
+	font-size: 0.85em;
+	color: #fff;
+	margin: 4px 0;
+	font-family: 'Josefin Sans', 'Times New Roman', sans-serif;
+	width: 150px;
+}
+.trans-bar nav ul li ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+/*
+form {
+	padding: 40px;
+	position: relative;
+	clear: both;
+}*/
+fieldset {
+  padding: 20px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  float: left;
+  width: 50%;
+}
+.form-row {
+  display: block;
+  padding: 7px 0;	
+  margin-bottom: 10px;
+}
+.text-fields {
+  padding: 10px 0;
+}
+.email {
+  margin-bottom: 17px;
+}
+.contact-img {
+  float: right;
+  width: 35%;
+  height: auto;
+}
+.contact-img img {
+  width: 100%;
+  height: auto;
+}
+.bottom-nav nav ul li {
+	display: inline;
+}
+.bottom-nav nav ul li a {
+	text-decoration: none;
+	color: #000;
+}
+.get-text {
+    float: left;
+    width: 47%;
+    margin-top: 20px;
+}
+.get-text p {
+    padding: 0 60px;
+}
+.get-text h2{
+    text-align: center;
+}
+.map {
+    float: right;
+    width: 52%;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #d4d4d4;
+}
+.map iframe {
+  width: 100%;
+}
+
+@media screen and (max-width: 896px) {
+ 
+    h1 {
+      font-size: 2.3em;
+    }
+    nav ul li a {
+      font-size: 0.95em;
+    }
+    nav ul li ul li a {
+      padding: 1em 2.5em;
+      font-size: 0.75em;
+      margin: .4706em 0;
+      width: 10em;
+    }
+    nav ul li ul li {
+      font-size: 0.68em;
+    }
+    .trans-bar nav ul li a {
+      font-size: 0.95em;
+    }
+    .trans-bar nav ul li ul li a {
+      padding: 1em 2.5em;
+      font-size: 0.75em;
+      margin: .4706em 0;
+      width: 10em;
+    }
+    .trans-bar nav ul li ul li {
+      font-size: 0.68em;
+    }
+    .product h2 {
+      font-size: 2em; 
+    }
+    .product p {
+      font-size: 0.675em;
+    }
+    .shade01 {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .light-neutral-cool {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .light-neutral-warm {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .meduim-neutral-cool {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .medium-neutral-warm {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .tan-neutral-cool {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .tan-neutral-warm {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .medium-warm {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .deep-warm {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .golden-medium-golden-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .medium-tan-cool-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .golden-tan-golden-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .warm-tan-golden-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .golden-deep-golden-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .warm-deep-golden-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .medium-deep-cool-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .deepest-deep-neutral-tone {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .black-plum {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .warm-beige {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .red-wine {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .mastic {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .pale-beige {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .light-pink {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .dark-grey {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .dark-blue {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .naked-light {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .naked-medium-light {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .naked-medium {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .naked-medium-dark {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .naked-dark {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .fair {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .light {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .light-medium {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .medium {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .beige {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .deep-beige {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .pink-honey {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .neutral-saffron {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .neutral-ebony {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .neutral-caramel {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .neutral-brown {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .golden-caramel {
+      height: 4.21875em;
+      width: 4.21875em;
+    }
+    .shades {
+      font-size: 1em;
+    }
+    .shades li a {
+      font-size: .75em;
+    }
+    .top-function {
+      height: 6.5em;
+    }
+    .fbtw ul li {
+      height: 23.75px;
+      width: 23.75px;
+    }
+    .fbtw2 ul li {
+      height: 23.75px;
+      width: 23.75px;
+    }
+    .get-text h2 {
+      font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+ 
+    h1 {
+      font-size: 2em;
+    }
+    nav ul li a {
+      font-size: 0.90em;
+    }
+    .trans-bar nav ul li ul li a {
+    padding: 1em 2.5em;
+    font-size: 0.65em;
+    margin: .4706em 0;
+    width: 10em;
+    }
+    .trans-bar nav ul li ul li {
+    font-size: 0.75em;
+    }
+    .trans-bar nav ul li a {
+      font-size: 0.90em;
+    }
+    .trans-bar nav ul li ul li a {
+    padding: 1em 2.5em;
+    font-size: 0.65em;
+    margin: .4706em 0;
+    width: 10em;
+    }
+    .trans-bar nav ul li ul li {
+    font-size: 0.75em;
+    }
+    .product h2 {
+      font-size: 1.7em; 
+    }
+    .product p {
+      font-size: 0.6em;
+    }
+    .shade01 {
+      height: 3.75em;
+      width: 3.75em;
+    }
+    .light-neutral-cool {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .light-neutral-warm {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .meduim-neutral-cool {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .medium-neutral-warm {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .tan-neutral-cool {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .tan-neutral-warm {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .medium-warm {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .deep-warm {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .golden-medium-golden-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .medium-tan-cool-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .golden-tan-golden-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .warm-tan-golden-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .golden-deep-golden-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .warm-deep-golden-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .medium-deep-cool-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .deepest-deep-neutral-tone {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .black-plum {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .warm-beige {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .red-wine {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .mastic {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .pale-beige {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .light-pink {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .dark-grey {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .dark-blue {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .naked-light {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .naked-medium-light {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .naked-medium {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .naked-medium-dark {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .naked-dark {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .fair {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .light {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .light-medium {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .medium {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .beige {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .deep-beige {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .pink-honey {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .neutral-saffron {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .neutral-ebony {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .neutral-caramel {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .neutral-brown {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .golden-caramel {
+      width: 3.75em;
+      height: 3.75em;
+    }
+    .shades {
+      font-size: 1em;
+    }
+    .shades li a {
+      font-size: .7em;
+    }
+    .top-function {
+      height: 6.5em;
+    }
+    .fbtw ul li {
+      height: 22.5px;
+      width: 22.5px;
+    }
+    .fbtw2 ul li {
+      height: 22.5px;
+      width: 22.5px;
+    }
+    .get-text h2 {
+      font-size: 1.6em;
+    }
+    .get-text p {
+      font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    
+}
